@@ -29,7 +29,6 @@ class PrimaryButtons extends StatelessWidget {
           elevation: 0,
           shape: const StadiumBorder(),
         ),
-        // فرزند دکمه باید اینجا قرار بگیرد، نه داخل styleFrom
         child: icon == null
             ? Text(text)
             : Row(
@@ -38,7 +37,6 @@ class PrimaryButtons extends StatelessWidget {
           children: [
             icon!,
             const SizedBox(width: 8),
-            // مطمئن شوید AppTextStyles یک TextStyle برمی‌گرداند یا متد درستی فراخوانی شده
             Text(text, style: const TextStyle()),
           ],
         ),
