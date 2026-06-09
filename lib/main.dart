@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:medical_health_title/core/theme/app_colors.dart';
 import 'package:medical_health_title/core/theme/app_textstyles.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:medical_health_title/features/homepage.dart';
+import 'package:medical_health_title/routes/app_pages.dart';
 
 void main() {
   runApp(const MedicalHealth());
@@ -13,10 +14,11 @@ class MedicalHealth extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner:  false,
       title: 'Medical Health',
-      debugShowCheckedModeBanner: false,
-      home: const SplashPage()  ,
+      home: const SplashPage(),
+      getPages: AppPages.pages,
     );
   }
 }
@@ -34,15 +36,11 @@ class SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(seconds: 3), () {
-      if (!mounted) return;
-
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const Homepage()),
-      );
+    Future.delayed(const Duration(seconds:3), () {
+      Get.offAllNamed('/auth');
     });
   }
+
 
 
   @override
