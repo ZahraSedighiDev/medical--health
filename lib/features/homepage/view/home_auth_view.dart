@@ -3,7 +3,10 @@ import 'package:medical_health_title/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:medical_health_title/core/utils/onboarding_gradient_background.dart';
 import 'package:medical_health_title/core/widgets/primary_buttons.dart';
+import 'package:medical_health_title/features/fourthpage/fourthpage_view/fourthpage_view.dart';
 import 'package:medical_health_title/features/homepage/viewmodel/homepage_viewmodel.dart';
+import 'package:medical_health_title/features/secondpage/secondpage_view/secondpage_view.dart';
+import 'package:medical_health_title/features/thirdpage/thirdpage_view/thirdpage_view.dart';
 import '../../../core/theme/app_icons.dart';
 import '../../../core/theme/app_textstyles.dart';
 
@@ -17,32 +20,68 @@ class HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     final medicalHealth = Get.find<HomepageViewmodel>();
+    double height = MediaQuery.sizeOf(context).height;
+    double width = MediaQuery.sizeOf(context).width;
+    return Scaffold(
+      body: SizedBox(
+        height: height,
+        width: width,
+        child:  Obx( (){
+          switch(medicalHealth.pageIndex.value){
+            case 0 :
+              return const FirstPage();
+            case 1 :
+              return const SecondpageView();
+            case 2 :
+              return const ThirdpageView();
+            case 3 :
+              return const FourthpageView();
+            default:
+              return const Homepage();
+
+          }
+        }),
+      ),
+    );
+  }
+}
+class FirstPage extends StatefulWidget {
+  const FirstPage({super.key});
+
+  @override
+  State<FirstPage> createState() => FirstPageState();
+}
+
+class FirstPageState extends State<FirstPage> {
+  @override
+  Widget build(BuildContext context) {
+    final medicalHealth = Get.find<HomepageViewmodel>();
     final media = MediaQuery.of(context);
     double height = media.size.height;
     return Scaffold(
       body: OnboardingGradientBackground(
-          child: SafeArea(
-              child: Stack(
-                children: [
-                  Align(
-                    alignment: Alignment(0, -0.35),
-                    child:  SizedBox(
-                      height: height * 0.8,
-                      child: Image.asset(
-                        AppIcons.doctor1  ,
-                        fit:  BoxFit.contain,
-                      ),
-                    ),
+        child: SafeArea(
+          child: Stack(
+            children: [
+              Align(
+                alignment: Alignment(0, -0.35),
+                child:  SizedBox(
+                  height: height * 0.8,
+                  child: Image.asset(
+                    AppIcons.doctor1  ,
+                    fit:  BoxFit.contain,
                   ),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: _BottomCard(onGetStarted: (){
-                      medicalHealth.setPage(1);
-                    }) ,
-                  ),
-                ],
+                ),
               ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: _BottomCard(onGetStarted: (){
+                  medicalHealth.setPage(1);
+                }) ,
+              ),
+            ],
           ),
+        ),
       ) ,
     );
   }
