@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:medical_health_title/core/theme/app_textstyles.dart';
 
 class PrimaryButtons extends StatelessWidget {
   final String text;
   final Color backgroundColor;
-  final Color textColor;
   final VoidCallback onPressed;
   final Widget? icon;
 
@@ -13,7 +13,6 @@ class PrimaryButtons extends StatelessWidget {
     required this.backgroundColor,
     required this.icon,
     required this.text,
-    required this.textColor,
   });
 
   @override
@@ -25,7 +24,6 @@ class PrimaryButtons extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor,
-          foregroundColor: textColor,
           elevation: 0,
           shape: const StadiumBorder(),
         ),
@@ -37,7 +35,7 @@ class PrimaryButtons extends StatelessWidget {
           children: [
             icon!,
             const SizedBox(width: 8),
-            Text(text, style: const TextStyle()),
+            Text(text, style: AppTextStyles.button),
           ],
         ),
       ),

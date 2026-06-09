@@ -12,7 +12,7 @@ class AppTextStyles {
   static const bodyMuted = TextStyle(
     fontSize: 13,
     fontWeight: FontWeight.w400,
-    color: AppColors.surface,
+    color: AppColors.secondary,
     height: 1.4,
   );
 
