@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:medical_health_title/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:medical_health_title/core/utils/onboarding_gradient_background.dart';
 import 'package:medical_health_title/core/widgets/primary_buttons.dart';
 import 'package:medical_health_title/features/homepage/viewmodel/homepage_viewmodel.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import '../../../core/theme/app_icons.dart';
 import '../../../core/theme/app_textstyles.dart';
 
@@ -30,9 +29,9 @@ class HomepageState extends State<Homepage> {
                     alignment: Alignment(0, -0.35),
                     child:  SizedBox(
                       height: height * 0.42,
-                      child: SvgPicture.asset(
-                        AppIcons.doctor11  ,
-                        colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+                      child: Image.asset(
+                        AppIcons.doctor1  ,
+                        fit:  BoxFit.contain,
                       ),
                     ),
                   ),
@@ -59,7 +58,7 @@ class _BottomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(30, 22, 20, 22),
+      padding: const EdgeInsets.fromLTRB(22, 22, 22, 22),
       decoration: const BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.only(
