@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:medical_health_title/core/utils/onboarding_gradient_background.dart';
 import 'package:medical_health_title/core/widgets/primary_buttons.dart';
 import 'package:medical_health_title/features/homepage/viewmodel/homepage_viewmodel.dart';
-
 import '../../../core/theme/app_icons.dart';
 import '../../../core/theme/app_textstyles.dart';
 
@@ -28,7 +27,7 @@ class HomepageState extends State<Homepage> {
                   Align(
                     alignment: Alignment(0, -0.35),
                     child:  SizedBox(
-                      height: height * 0.42,
+                      height: height * 0.8,
                       child: Image.asset(
                         AppIcons.doctor1  ,
                         fit:  BoxFit.contain,
@@ -90,10 +89,11 @@ class _BottomCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16,),
-          PrimaryButtons(onPressed: onGetStarted,
+             PrimaryButtons(onPressed: onGetStarted,
               backgroundColor: AppColors.blue2,
-              icon: null ,
-              text: "Get Started",),
+              icon: null,
+              text: 'Get Started',
+              textColor: Colors.white),
           const SizedBox(height: 8,)
         ],
       ),

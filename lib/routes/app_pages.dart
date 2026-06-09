@@ -9,7 +9,6 @@ import 'package:medical_health_title/features/thirdpage/thirdpage_binding/thirdp
 import 'package:medical_health_title/features/thirdpage/thirdpage_view/thirdpage_view.dart';
 import 'package:medical_health_title/routes/app_routes.dart';
 
-import '../features/homepage/viewmodel/homepage_viewmodel.dart';
 
 class AppPages {
   static final pages = [
@@ -27,7 +26,7 @@ class AppPages {
     ),
     GetPage(name: AppRoutes.fourthPage,
         page: () => const FourthpageView() ,
-        binding: FourthpageBinding();
+        binding: FourthpageBinding(),
 
     )
   ];
