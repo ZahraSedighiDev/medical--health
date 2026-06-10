@@ -1,9 +1,8 @@
 import 'package:get/get.dart';
 
-class SecondpageViewmodel extends GetxController{
-  final selectedCategori = 0.obs ;
-  void changeCategori(int index){
-    selectedCategori.value = index;
+import '../secondpage_model/secondpage_model.dart';
 
-  }
+class SecondpageViewmodel extends GetxController{
+  var topDoctors = <Doctor>[].obs;
+
 }
