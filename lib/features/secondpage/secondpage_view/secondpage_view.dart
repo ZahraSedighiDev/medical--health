@@ -8,8 +8,6 @@ import '../../../core/theme/app_icons.dart';
 import '../../homepage/viewmodel/homepage_viewmodel.dart';
 import 'doctors.dart';
 
-
-
 class SecondpageView extends StatefulWidget {
   const SecondpageView({super.key});
 
