@@ -125,7 +125,6 @@ class _DoctorListCardState extends State<DoctorListCard> {
                 children: [
                   Icon(Icons.access_time, color: Colors.grey[700], size: 20),
                   const SizedBox(width: 8),
-                   // برای سادگی فعلا یه Text میذاریم، بعدا میشه DropdownButton
                   Text("Available: ${_selectedTime ?? 'Select Time'}"),
                   const Spacer(), // این هم Push میکنه دکمه Reserve رو به راست
               ElevatedButton(

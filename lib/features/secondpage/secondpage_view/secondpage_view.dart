@@ -3,6 +3,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:medical_health_title/features/secondpage/secondpage_view/header.dart';
 import 'package:medical_health_title/features/secondpage/secondpage_view/navigationbar.dart';
+import 'package:medical_health_title/features/secondpage/secondpage_view/topDoctors.dart';
 import '../../../core/theme/app_icons.dart';
 import '../../homepage/viewmodel/homepage_viewmodel.dart';
 import 'doctors.dart';
@@ -31,64 +32,47 @@ class SecondpageViewState extends State<SecondpageView> {
     final medicalHealth = Get.find<HomepageViewmodel>();
     return Scaffold(
       body: SafeArea(
-          child: Stack(
-            children: [
-              Column(
-                children: [
-                  Header(),
-                  SizedBox(height: 10,),
-                  Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child:
-                            const Text("Favourite Doctor"),
-                          ),
-                          Align(
-                            alignment: Alignment.centerRight,
-                            child:TextButton(
-                              onPressed: () {
-                                medicalHealth.setPage(4);
-                              },
-                              child: const Text("See All" , style: TextStyle(fontSize: 15),),
-                            )
-                            ,
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 250,
-                        child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            itemCount: myDoctors.length,
-                            itemBuilder: (context, index){
-                              final doctor = myDoctors[index];
-                              return DoctorCard(name: doctor["name"],
-                                  specialty: doctor["specialty"] ,
-                                  rating: doctor["rating"],
-                                  imageUrl: doctor["image"]
-                              );
-                            }
-                        ),
-                      ),
-
-                    ],
+        child: Column(
+          children: [
+            Header(),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text("Favourite Doctor"),
+                TextButton(
+                  onPressed: () {
+                    medicalHealth.setPage(4);
+                  },
+                  child: const Text(
+                    "See All",
+                    style: TextStyle(fontSize: 15),
                   ),
-                  Positioned(
-                      bottom: 0,
-                      left: 0,
-                      right: 0,
-                      child: Navigationbar())
-
-
-                ],
-              )
-            ],
-          )
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 200,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: myDoctors.length,
+                itemBuilder: (context, index) {
+                  final doctor = myDoctors[index];
+                  return DoctorCard(
+                    name: doctor["name"],
+                    specialty: doctor["specialty"],
+                    rating: doctor["rating"],
+                    imageUrl: doctor["image"],
+                  );
+                },
+              ),
+            ),
+            SizedBox(height: 40),
+            const TopDoctors(),
+          ],
+        ),
       ),
+      bottomNavigationBar: Navigationbar(),
     );
   }
 
