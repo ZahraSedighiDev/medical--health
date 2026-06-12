@@ -62,7 +62,6 @@ class SeeAllDoctorsPage extends StatelessWidget {
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
             medicalHealth.setPage(1);
-
           },
         ),
         actions: [

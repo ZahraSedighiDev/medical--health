@@ -6,3 +6,4 @@ class SecondpageViewmodel extends GetxController{
   var topDoctors = <Doctor>[].obs;
 
 }
+
