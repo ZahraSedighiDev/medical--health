@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:medical_health_title/core/theme/app_textstyles.dart';
 import 'package:medical_health_title/features/secondpage/secondpage_view/header.dart';
+import 'package:medical_health_title/features/secondpage/secondpage_view/see_all_doctors_page.dart';
 
 import '../../../core/theme/app_icons.dart';
 import '../../homepage/viewmodel/homepage_viewmodel.dart';
@@ -27,6 +29,7 @@ class SecondpageViewState extends State<SecondpageView> {
 
   @override
   Widget build(BuildContext context) {
+    final medicalHealth = Get.find<HomepageViewmodel>();
     return Scaffold(
       body: SafeArea(
           child: Column(
@@ -45,7 +48,13 @@ class SecondpageViewState extends State<SecondpageView> {
                       ),
                       Align(
                         alignment: Alignment.centerRight,
-                        child: SeeAll(),
+                        child:TextButton(
+                          onPressed: () {
+                            medicalHealth.setPage(4);
+                          },
+                          child: const Text("See All" , style: TextStyle(fontSize: 15),),
+                        )
+                        ,
                       )
                     ],
                   ),
@@ -72,25 +81,4 @@ class SecondpageViewState extends State<SecondpageView> {
     );
   }
 
-}
-class SeeAll extends StatefulWidget {
-  const SeeAll({super.key});
-
-  @override
-  State<SeeAll> createState() => SeeAllState();
-}
-class SeeAllState extends State<SeeAll> {
-  @override
-  Widget build(BuildContext context) {
-    final medicalHealth = Get.find<HomepageViewmodel>();
-    return GestureDetector(
-      onTap:(){
-        setState(() {
-          medicalHealth.setPage(4);
-        });
-      },
-      child:
-      Text("See All" , style: AppTextStyles.littleTitle,),
-    );
-  }
 }
