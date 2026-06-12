@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/theme/app_icons.dart';
 
 class DoctorCard extends StatelessWidget {
   final String name;
   final String specialty;
   final double rating;
+  final String imageUrl ;
 
   const DoctorCard({
     super.key,
     required this.name,
     required this.specialty,
     required this.rating,
+    required this.imageUrl,
   });
 
   @override
@@ -22,7 +23,7 @@ class DoctorCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
-        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10)],
+        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 30)],
       ),
       child: Column(
         children: [
@@ -31,7 +32,9 @@ class DoctorCard extends StatelessWidget {
             child: Container(
                 height: 100,
                 color: Colors.grey[200],
-              child: Image.asset( AppIcons.doctor1),
+              child: Image.asset( imageUrl ,
+              fit:  BoxFit.cover,
+              ),
 
             ),
           ),

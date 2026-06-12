@@ -8,6 +8,12 @@ class AppTextStyles {
     color: AppColors.primary,
     height: 1.2,
   );
+  static const littleTitle = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w700,
+    color: AppColors.primary,
+    height: 1.2,
+  );
 
   static const bodyMuted = TextStyle(
     fontSize: 13,

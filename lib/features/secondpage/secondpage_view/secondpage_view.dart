@@ -4,6 +4,7 @@ import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:medical_health_title/core/theme/app_textstyles.dart';
 import 'package:medical_health_title/features/secondpage/secondpage_view/header.dart';
 
+import '../../../core/theme/app_icons.dart';
 import '../../homepage/viewmodel/homepage_viewmodel.dart';
 import 'doctors.dart';
 
@@ -14,6 +15,16 @@ class SecondpageView extends StatefulWidget {
   State<SecondpageView> createState() => SecondpageViewState();
 }
 class SecondpageViewState extends State<SecondpageView> {
+  final List<Map<String, dynamic>> myDoctors = [
+    {"name": "Dr. Esther", "specialty": "Dentist", "rating": 4.5 , "image" :AppIcons.doctor1},
+    {"name": "Dr. Ali", "specialty": "Cardiologist", "rating": 4.8 , "image" : AppIcons.doctor2},
+    {"name": "Dr. Sara", "specialty": "Surgeon", "rating": 5, "image" : AppIcons.doctor4},
+    {"name": "Dr. James", "specialty": "Medical", "rating": 4.9, "image" : AppIcons.doctor2},
+    {"name": "Dr. Mike", "specialty": "dentist", "rating": 4.9 ,"image" : AppIcons.doctor5},
+    {"name": "Dr. Aref", "specialty": "Nero Surgeon", "rating": 3.9 ,"image" : AppIcons.doctor3},
+    {"name": "Dr. Amy", "specialty": "G.P", "rating": 3, "image" : AppIcons.doctor1},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,15 +50,18 @@ class SecondpageViewState extends State<SecondpageView> {
                     ],
                   ),
                   SizedBox(
-                    height: 250, // ارتفاع کارت‌ها
+                    height: 250,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      itemCount: 5,
-                      itemBuilder: (context, index) => DoctorCard(
-                        name: "Dr. Esther",
-                        specialty: "Dentist",
-                        rating: 4.5,
-                      ),
+                      itemCount: myDoctors.length,
+                      itemBuilder: (context, index){
+                        final doctor = myDoctors[index];
+                        return DoctorCard(name: doctor["name"],
+                            specialty: doctor["specialty"] ,
+                            rating: doctor["rating"],
+                            imageUrl: doctor["image"]
+                        );
+                      }
                     ),
                   ),
                 ],
@@ -76,7 +90,7 @@ class SeeAllState extends State<SeeAll> {
         });
       },
       child:
-      Text("See All" , style: AppTextStyles.title,),
+      Text("See All" , style: AppTextStyles.littleTitle,),
     );
   }
 }
