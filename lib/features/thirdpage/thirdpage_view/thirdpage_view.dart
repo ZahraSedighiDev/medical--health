@@ -14,7 +14,6 @@ class ThirdpageView extends StatefulWidget {
   @override
   State<ThirdpageView> createState() => ThirdpageViewState();
 }
-
 class ThirdpageViewState extends State<ThirdpageView> {
   @override
   Widget build(BuildContext context) {

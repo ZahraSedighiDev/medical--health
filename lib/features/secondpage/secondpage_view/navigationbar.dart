@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_health_title/core/theme/app_icons.dart';
+import 'package:medical_health_title/features/homepage/view/home_auth_view.dart';
 import '../../../core/theme/app_colors.dart';
+import '../../thirdpage/thirdpage_view/thirdpage_view.dart';
 
 class Navigationbar extends StatefulWidget {
   const Navigationbar({super.key});
@@ -87,5 +89,18 @@ class NavController extends GetxController {
 
   void updateIndex(int index) {
   activeIndex.value = index;
+
+  if (index == 2){
+    Get.to(() => const ThirdpageView());
+  }
+  else if(index == 0 ){
+    Get.to(() => const Homepage());
+  }
+  else if( index ==1){
+
+  }
+  else if (index == 3){
+
+  }
 }
 }
