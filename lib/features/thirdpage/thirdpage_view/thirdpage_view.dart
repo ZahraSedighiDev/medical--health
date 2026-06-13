@@ -7,6 +7,7 @@ import 'package:medical_health_title/core/theme/app_icons.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/primary_buttons.dart';
 import '../../homepage/viewmodel/homepage_viewmodel.dart';
+import '../../secondpage/secondpage_view/navigationbar.dart';
 
 class ThirdpageView extends StatefulWidget {
   const ThirdpageView({super.key});
@@ -50,7 +51,7 @@ class ThirdpageViewState extends State<ThirdpageView> {
           ),
         ],
       ),
-      body:  SafeArea(child: SingleChildScrollView(
+      body:  SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -70,14 +71,16 @@ class ThirdpageViewState extends State<ThirdpageView> {
             const SizedBox(height: 24),
             _buildJoyWidget(),
             const SizedBox(height: 24),
-            _buildgetStartedButton(),
-            const SizedBox(height: 20,)
-
+             _buildgetStartedButton(),
 
           ],
         ),
-      )
-      ));
+
+      ),
+      bottomNavigationBar: Navigationbar(),
+
+
+    );
   }
   Widget _buildDoctorHeader ({
     required String doctorName,
@@ -96,7 +99,7 @@ class ThirdpageViewState extends State<ThirdpageView> {
             decoration: BoxDecoration(
               color: const Color(0xFF199A8E) ,
               borderRadius: BorderRadius.circular(20),
-              image:DecorationImage(image: AssetImage(AppIcons.doctor3)
+              image:DecorationImage(image: AssetImage(AppIcons.doctor1)
               , fit: BoxFit.cover,
               ) ,
             ),

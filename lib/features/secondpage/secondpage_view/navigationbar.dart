@@ -102,7 +102,7 @@ class NavController extends GetxController {
     }
     else if (index == 0) {
       // رفتن به صفحه اصلی
-      medicalHealth.setPage(0);
+      medicalHealth.setPage(2);
     }
     else if (index == 1) {
       medicalHealth.setPage(2);
