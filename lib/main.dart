@@ -5,7 +5,10 @@ import 'package:medical_health_title/core/theme/app_textstyles.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:medical_health_title/routes/app_pages.dart';
 
+import 'features/homepage/viewmodel/homepage_viewmodel.dart';
+
 void main() {
+  Get.put(HomepageViewmodel());
   runApp(const MedicalHealth());
 }
 
