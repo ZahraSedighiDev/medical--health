@@ -96,7 +96,7 @@ class NavController extends GetxController {
     final medicalHealth = Get.find<HomepageViewmodel>();
 
     if (index == 2) {
-      medicalHealth.setPage(2);
+      medicalHealth.setPage(6);
     }
     else if (index == 0) {
       medicalHealth.setPage(1);
