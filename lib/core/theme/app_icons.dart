@@ -1,5 +1,4 @@
 
-
 import 'package:flutter/material.dart';
 
 class AppIcons {
@@ -10,6 +9,7 @@ class AppIcons {
   static const String doctor3 = 'assets/pics/doctor33.png' ;
   static const String doctor4 = 'assets/pics/doctor44.png' ;
   static const String doctor5 = 'assets/pics/doctor5.png' ;
+  static const String profile = 'assets/pics/profile.png';
 //svg
   static const String doctor11 = 'assets/svg/doctor1.svg' ;
   static const String doctor12 = 'assets/svg/doctor2.svg' ;

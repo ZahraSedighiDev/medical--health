@@ -16,7 +16,7 @@ class SecondpageView extends StatefulWidget {
 }
 class SecondpageViewState extends State<SecondpageView> {
   final List<Map<String, dynamic>> myDoctors = [
-    {"name": "Dr. Esther", "specialty": "Dentist", "rating": 4.5 , "image" :AppIcons.doctor1},
+    {"name": "Dr. M Khoshbakht", "specialty": "Neurologist", "rating": 4.5 , "image" :AppIcons.doctor1},
     {"name": "Dr. Ali", "specialty": "Cardiologist", "rating": 4.8 , "image" : AppIcons.doctor2},
     {"name": "Dr. Sara", "specialty": "Surgeon", "rating": 5, "image" : AppIcons.doctor4},
     {"name": "Dr. James", "specialty": "Medical", "rating": 4.9, "image" : AppIcons.doctor2},

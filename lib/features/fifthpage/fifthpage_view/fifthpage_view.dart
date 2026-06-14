@@ -81,7 +81,7 @@ class _FifthpageViewState extends State<FifthpageView> {
         children: [
           const CircleAvatar(
             radius: 18,
-            backgroundImage: AssetImage(AppIcons.doctor2 ,
+            backgroundImage: AssetImage(AppIcons.doctor1 ,
 
             ) ,
           ),

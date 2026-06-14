@@ -25,7 +25,7 @@ class ThirdpageViewState extends State<ThirdpageView> {
     final reviews = 332;
     final patients = "120+";
     final yearsExp = "7+";
-    final aboutMe = "Dr. Khoshbakht is the top most immunologists specialist in Crist Hospital in London, UK.";
+    final aboutMe = "Dr. Khoshbakht is the top most immunologists specialist in Razavi Hospital in Mashhad.";
     return Scaffold(
       backgroundColor: Colors.green.shade50,
       appBar: AppBar(

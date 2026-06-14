@@ -11,6 +11,7 @@ import 'package:medical_health_title/features/secondpage/secondpage_view/see_all
 import 'package:medical_health_title/features/thirdpage/thirdpage_view/thirdpage_view.dart';
 import '../../../core/theme/app_icons.dart';
 import '../../../core/theme/app_textstyles.dart';
+import '../../profile/profile_view/profile_view.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -44,6 +45,8 @@ class HomepageState extends State<Homepage> {
               return const FourthpageView();
             case 6 :
               return const FifthpageView();
+            case 7 :
+              return const ProfileView();
             default:
               return const Homepage();
 

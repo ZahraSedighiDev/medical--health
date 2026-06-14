@@ -39,10 +39,10 @@ class TopdoctorsState extends State<TopDoctors> {
               )
             ],
           ),
-          DoctorListCard(name: "Dr James", specialty: "Cardiologist", rating: 4.9
+          DoctorListCard(name: "Dr. M Khoshbakht", specialty: "Neurologist", rating: 4.9
               , imageUrl: AppIcons.doctor1, address: "Malek Abad blv , Haghshenas Ave"),
            SizedBox(height: 10,),
-          DoctorListCard(name: "Dr Rosy", specialty: "psychologist", rating: 4.9
+          DoctorListCard(name: "Dr Rosy", specialty: "Cardiologist", rating: 4.9
               , imageUrl: AppIcons.doctor3, address: "Malek Abad blv , Haghshenas Ave")
 
         ],

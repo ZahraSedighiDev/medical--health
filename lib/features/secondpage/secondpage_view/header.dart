@@ -58,7 +58,7 @@ class HeaderProfile extends StatelessWidget {
         CircleAvatar(
           radius: 25,
           backgroundImage: AssetImage(
-            AppIcons.doctor2,
+            AppIcons.profile,
           ),
         ),
         SizedBox(width: 22,),
