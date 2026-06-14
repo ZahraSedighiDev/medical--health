@@ -304,7 +304,7 @@ class ThirdpageViewState extends State<ThirdpageView> {
       colorText: Colors.white,
       );
 
-      medicalHealth.setPage(4);
+      medicalHealth.setPage(5);
       },
             backgroundColor: AppColors.blue2,
             icon: Icon(AppIcons.call),

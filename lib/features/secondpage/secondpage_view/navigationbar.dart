@@ -10,7 +10,6 @@ class Navigationbar extends StatefulWidget {
   @override
   State<Navigationbar> createState() => NavigationbarState();
 }
-
 class NavigationbarState extends State<Navigationbar> {
   final NavController controller = Get.put(NavController());
 
@@ -33,7 +32,7 @@ class NavigationbarState extends State<Navigationbar> {
         children: [
           NavBarItem(icon: AppIcons.home, index: 0),
           NavBarItem(icon: AppIcons.calendar, index: 1),
-          NavBarItem(icon: AppIcons.settings, index: 2),
+          NavBarItem(icon: AppIcons.chatBubble, index: 2),
           NavBarItem(icon: AppIcons.person, index: 3),
         ],
       ),
@@ -50,7 +49,6 @@ class NavBarItem extends StatefulWidget {
   @override
   State<NavBarItem> createState() => NavBarItemState();
 }
-
 class NavBarItemState extends State<NavBarItem> {
   bool isHovered = false;
 
@@ -101,8 +99,7 @@ class NavController extends GetxController {
       medicalHealth.setPage(2);
     }
     else if (index == 0) {
-      // رفتن به صفحه اصلی
-      medicalHealth.setPage(2);
+      medicalHealth.setPage(1);
     }
     else if (index == 1) {
       medicalHealth.setPage(2);

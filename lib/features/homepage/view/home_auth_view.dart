@@ -39,6 +39,8 @@ class HomepageState extends State<Homepage> {
               return const FourthpageView();
             case 4 :
               return const SeeAllDoctorsPage();
+            case 5 :
+              return const FourthpageView();
             default:
               return const Homepage();
 
