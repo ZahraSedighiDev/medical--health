@@ -3,6 +3,7 @@ import 'package:medical_health_title/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:medical_health_title/core/utils/onboarding_gradient_background.dart';
 import 'package:medical_health_title/core/widgets/primary_buttons.dart';
+import 'package:medical_health_title/features/fifthpage/fifthpage_view/fifthpage_view.dart';
 import 'package:medical_health_title/features/fourthpage/fourthpage_view/fourthpage_view.dart';
 import 'package:medical_health_title/features/homepage/viewmodel/homepage_viewmodel.dart';
 import 'package:medical_health_title/features/secondpage/secondpage_view/secondpage_view.dart';
@@ -41,6 +42,8 @@ class HomepageState extends State<Homepage> {
               return const SeeAllDoctorsPage();
             case 5 :
               return const FourthpageView();
+            case 6 :
+              return const FifthpageView();
             default:
               return const Homepage();
 

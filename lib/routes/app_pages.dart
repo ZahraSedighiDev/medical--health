@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:medical_health_title/features/fifthpage/fifthpage_binding/fifthpage_binding.dart';
+import 'package:medical_health_title/features/fifthpage/fifthpage_view/fifthpage_view.dart';
 import 'package:medical_health_title/features/fourthpage/fourthpage_binding/fourthpage_binding.dart';
 import 'package:medical_health_title/features/fourthpage/fourthpage_view/fourthpage_view.dart';
 import 'package:medical_health_title/features/homepage/binding/home_auth_binding.dart';
@@ -27,6 +29,11 @@ class AppPages {
     GetPage(name: AppRoutes.fourthPage,
         page: () => const FourthpageView() ,
         binding: FourthpageBinding(),
+
+    ),
+    GetPage(name: AppRoutes.chatPage,
+        page: () => const FifthpageView() ,
+        binding: FifthpageBinding(),
 
     )
   ];
