@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medical_health_title/features/secondpage/secondpage_view/navigationbar.dart';
-
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_icons.dart';
 
